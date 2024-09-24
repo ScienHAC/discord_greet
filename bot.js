@@ -17,32 +17,29 @@ const greetings = {
 };
 
 const userLastGreeted = {}; // To track when a user was last greeted
+const CHANNEL_ID = '1286916622270861426'; // Your specific channel ID
 
 client.once('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
+  console.log(`Bot is ready to greet users!`);
 });
 
 client.on('presenceUpdate', (oldPresence, newPresence) => {
   const userId = newPresence.userId;
   const member = newPresence.member;
 
-  console.log(`Presence updated for user: ${userId}, Status: ${newPresence.status}`);
-
-  // Check if the user comes online
   if (newPresence.status === 'online' && (!oldPresence || oldPresence.status === 'offline')) {
     const currentDate = moment().format('YYYY-MM-DD');
 
-    console.log(`User is online. Checking if they have been greeted today...`);
-
-    // Check if the user has already been greeted today
     if (!userLastGreeted[userId] || userLastGreeted[userId] !== currentDate) {
-      const channel = member.guild.channels.cache.find(ch => ch.type === 'GUILD_TEXT' && ch.permissionsFor(member).has('SEND_MESSAGES'));
-      
-      if (channel) {
+      // Find the channel by ID
+      const channel = member.guild.channels.cache.get(CHANNEL_ID);
+
+      // Check if the channel exists and the bot has permission to send messages
+      if (channel && channel.type === 'GUILD_TEXT' && channel.permissionsFor(member.guild.me).has('SEND_MESSAGES')) {
         const hour = moment().hour();
         let greeting;
 
-        // Determine the appropriate greeting based on the time of day
         if (hour < 12) {
           greeting = greetings.morning;
         } else if (hour < 18) {
@@ -53,24 +50,14 @@ client.on('presenceUpdate', (oldPresence, newPresence) => {
           greeting = greetings.night;
         }
 
-        // Send the greeting message
         channel.send(`${greeting}, ${member.user.username}!`);
         
-        userLastGreeted[userId] = currentDate; // Update last greeted date
-        console.log(`Greeting sent to ${member.user.username} in channel ${channel.name}`);
+        userLastGreeted[userId] = currentDate;
       } else {
-        console.log(`No suitable channel found to send the greeting.`);
+        console.log("No suitable channel found to send the greeting.");
       }
-    } else {
-      console.log(`User ${member.user.username} has already been greeted today.`);
     }
   }
 });
-client.once('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-  console.log(`Bot is ready to greet users!`);
-});
 
-
-// Login to Discord with your bot token
 client.login(process.env.BOT_TOKEN); // Use the environment variable for your token

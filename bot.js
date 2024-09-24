@@ -66,6 +66,11 @@ client.on('presenceUpdate', (oldPresence, newPresence) => {
     }
   }
 });
+client.once('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+  console.log(`Bot is ready to greet users!`);
+});
+
 
 // Login to Discord with your bot token
 client.login(process.env.BOT_TOKEN); // Use the environment variable for your token

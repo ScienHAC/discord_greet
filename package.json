@@ -2,16 +2,16 @@
   "name": "discord-bot",
   "version": "1.0.0",
   "description": "A simple Discord bot that greets users.",
-  "main": "bot.js",  // Change this to your file name if using something else
+  "main": "bot.js",  
   "scripts": {
-    "start": "node bot.js"  // Change this to your file name if using something else
+    "start": "node bot.js"  
   },
   "dependencies": {
-    "discord.js": "^14.0.0",  // Use the latest version
-    "moment": "^2.29.1"  // Use the latest version
+    "discord.js": "^14.0.0",  
+    "moment": "^2.29.1"  
   },
   "engines": {
-    "node": ">=16.0.0"  // Specify the Node.js version
+    "node": ">=16.0.0" 
   },
   "license": "MIT"
 }

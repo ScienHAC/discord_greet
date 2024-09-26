@@ -1,14 +1,14 @@
 const { Client, GatewayIntentBits } = require('discord.js');
 
-// Initialize the bot with the required intents
 const client = new Client({
   intents: [
     GatewayIntentBits.Guilds,
-    GatewayIntentBits.GuildMembers, // For accessing members
-    GatewayIntentBits.GuildPresences, // For checking presence (status)
-    GatewayIntentBits.MessageContent // For reading message content
+    GatewayIntentBits.GuildMembers, // For accessing members (needs Server Members Intent enabled)
+    GatewayIntentBits.GuildPresences, // For checking presence (needs Presence Intent enabled)
+    GatewayIntentBits.MessageContent // For reading message content (needs Message Content Intent enabled)
   ],
 });
+
 
 // Your bot token
 const TOKEN = process.env.TOKEN;

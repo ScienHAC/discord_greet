@@ -6,6 +6,7 @@ const client = new Client({
     GatewayIntentBits.Guilds,
     GatewayIntentBits.GuildMembers, // For accessing members
     GatewayIntentBits.GuildPresences, // For checking presence (status)
+    GatewayIntentBits.MessageContent // For reading message content
   ],
 });
 

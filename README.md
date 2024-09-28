@@ -1,6 +1,6 @@
 # HelioBits Nova
 
-![HelioBits Nova Logo](https://via.placeholder.com/150)  <!-- Replace with your actual logo URL -->
+![HelioBits Nova Logo](https://lh3.googleusercontent.com/gg/ACM6BItiH-tm7v5tmxJcZ13CB0QxqoTPspyrLGaNEkt8t4ClNjLNo2ERVgIRXZSO6rS9iOotbRpKc5O2xhReKhGsY6PgLAVugA9OmmFqK5ZqgI1tYjIb0H-fg5NHOm9CvCHEzGuh_jwCy-F37c5Kl6APffDyW_1LflCAApTWcB1-nD65u8H5V-94xQxlSdLx7HqalhymGp2Lno_khSO-soTCdP2GEWMIKaHKoUaISZMKYyC30WCsCObz0nzcCLdZiluu7m_EtJ8RjGPm1o3xrWGnog-2enJbmANSEuM=d)  <!-- Replace with your actual logo URL -->
 
 **HelioBits Nova** is a Discord bot that brings a friendly atmosphere to your server by greeting users when they come online. With a unique feature that allows it to greet each user once a day, HelioBits Nova ensures that no one feels overlooked in the digital space!
 

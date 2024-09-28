@@ -1,7 +1,29 @@
-👋 Hello, I'm Piyush! Currently pursuing a B.Tech in Computer Science and Engineering with a specialization in Artificial Intelligence and Machine Learning.
+# HelioBits Nova
 
-🎯 Passionate about Technology: I'm excited to share my projects and tips to help fellow programmers advance their careers. My love for coding runs deep, especially when it comes to languages like C++ and Java. I'm also keen on working with TensorFlow, AI in automation, blockchain, and other cutting-edge technologies.
+![HelioBits Nova Logo](https://via.placeholder.com/150)  <!-- Replace with your actual logo URL -->
 
-💻 Developer at Heart: Currently, I'm involved in several projects as a full-stack software developer. I enjoy pulling and calling APIs to enhance my work, building AI models, and diving into the intricacies of DSA (Data Structures and Algorithms).
+**HelioBits Nova** is a Discord bot that brings a friendly atmosphere to your server by greeting users when they come online. With a unique feature that allows it to greet each user once a day, HelioBits Nova ensures that no one feels overlooked in the digital space!
 
-📚 Eager Learner: Beyond coding, I have a strong interest in engineering physics and electronics, always eager to explore the intersection of these fields with technology.
+## Table of Contents
+
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Commands](#commands)
+- [Example Code](#example-code)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+
+## Features
+
+- 🎉 **Daily Greetings**: Greets users when they come online, once per day.
+- 👤 **User-Friendly**: Personalizes greetings using user display names.
+- 📅 **Persistent Memory**: Remembers when users were last greeted to avoid duplicate messages.
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/ScienHAC/discord_greet.git
+   cd discord_greet

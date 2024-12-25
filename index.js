@@ -1,5 +1,13 @@
+// Import required modules
+const express = require('express');
 const { Client, GatewayIntentBits } = require('discord.js');
+require('dotenv').config();
 
+// Initialize Express app
+const app = express();
+const port = process.env.PORT || 3000; // Set port to 3000 or from environment variable
+
+// Initialize Discord bot client
 const client = new Client({
   intents: [
     GatewayIntentBits.Guilds,
@@ -9,13 +17,24 @@ const client = new Client({
   ],
 });
 
-
-// Your bot token
+// Your bot token and channel ID from .env or environment variables
 const TOKEN = process.env.TOKEN;
-
 const CHANNEL_ID = process.env.CHANNEL_ID;
+
 // Object to keep track of the last greeting date for each user
 const lastGreetingMap = {};
+
+// Express route for root URL ("/")
+app.get('/', (req, res) => {
+  res.send('Hello, the bot is running and ready to greet users when they come online!');
+});
+
+// Start Express server
+app.listen(port, () => {
+  console.log(`Express server is running on http://localhost:${port}`);
+});
+
+// Discord bot logic
 
 client.once('ready', async () => {
   console.log(`Logged in as ${client.user.tag}`);
